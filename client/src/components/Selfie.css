@@ -1,0 +1,83 @@
+.selfie {
+  display: flex;
+  justify-content: center;
+}
+
+.cam,
+.preview {
+  position: relative;
+}
+
+.preview-img {
+  display: block;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, rgb(0, 0, 0,0.6) 50%);
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, rgba(0, 0, 0, 0.6) 50%);
+}
+
+.capture-btn {
+  position: absolute;
+  bottom: 9px;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 40px;
+}
+
+.video-player {
+  display: block;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, rgba(0, 0, 0, 0.6) 50%);
+  mask-image: radial-gradient(circle at 50% 50%, black 50%, rgba(0, 0, 0, 0.6) 50%);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: all 1.5s;
+}
+
+.great-btn {
+  text-align: center;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 5px;
+  width: 7rem;
+  margin-left: 1rem;
+}
+
+.great-btn:active {
+  transform: translateY(1px);
+}
+
+.back-btn {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 40px;
+}
+
+.great-btn:hover > .fa-thumbs-up {
+  animation: bounce 0.9s infinite;
+}
+
+.picture-btn {
+  margin: 2px auto !important;
+  width: fit-content;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+} ;
