@@ -18,6 +18,7 @@
     "config": "^3.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
+    "google-auth-library": "^6.1.4",
     "gravatar": "^1.8.1",
     "gridfs-stream": "^1.1.1",
     "helmet": "^4.2.0",
@@ -29,6 +30,7 @@
     "normalize-url": "^5.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-google-login": "^5.2.2",
     "react-scripts": "^3.4.3",
     "request": "^2.88.2",
     "uninstall": "0.0.0",
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.6"
   }
 }

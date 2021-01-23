@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
-
+import SocialLogin from './SocialLogin';
 
 function Login({ login, isAuthenticated }) {
 
@@ -51,6 +51,9 @@ function Login({ login, isAuthenticated }) {
                 </div>
                 <input type="submit" className="btn btn-primary" value="Register" />
             </form>
+            <div>
+                <SocialLogin />
+            </div>
             <p className="my-1">
                 Dont have an account? <Link to="/register">Sign Up</Link>
             </p>

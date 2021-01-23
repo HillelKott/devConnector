@@ -29,6 +29,7 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/img_upload', require('./routes/api/img_upload'));
+app.use('/api/verify_google_user', require('./routes/api/verify_google_user'));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
