@@ -3,7 +3,7 @@
 // import { REGISTER_FAIL, REGISTER_SUCCESS, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } from './types';
 import axios from 'axios';
 
-export const googleSigninSuccess = async res => {
+export const googleSigninSuccess = res => async () => {
     const body = { token: res.tokenId };
     const headers = { headers: { accept: 'application/json' } };
 
