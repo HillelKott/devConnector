@@ -8,3 +8,4 @@ debug.log
 config/default.json
 config/production.json
 .env
+.gitignore
