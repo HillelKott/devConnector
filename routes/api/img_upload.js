@@ -18,11 +18,11 @@ let db;
 //     };
 // }
 
-if (config.get('master_image_mongoURI')) {
-    db = config.get('master_image_mongoURI');
-} else {
-    db = process.env.master_image_mongoURI;
-};
+// if (config.get('master_image_mongoURI')) {
+// db = config.get('master_image_mongoURI');
+// } else {
+db = process.env.master_image_mongoURI;
+// };
 
 
 const conn = mongoose.createConnection(db, { useNewUrlParser: true });
