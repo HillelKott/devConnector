@@ -9,15 +9,21 @@ const Grid = require('gridfs-stream');
 const User = require('../../models/User');
 const config = require('config');
 let db;
-if (process.env.image_mongoURI) {
-    db = process.env.image_mongoURI
+
+if (config.get('image_mongoURI')) {
+    db = config.get('image_mongoURI');
 } else {
-    if (process.env.NODE_ENV !== 'production') {
-        db = config.get('image_mongoURI')
-    } else {
-        db = config.get('master_image_mongoURI')
-    }
+    db = process.env.image_mongoURI;
 };
+
+if (process.env.NODE_ENV == 'production') {
+    if (config.get('master_image_mongoURI')) {
+        db = config.get('master_image_mongoURI');
+    } else {
+        db = process.env.master_image_mongoURI;
+    };
+}
+
 
 const conn = mongoose.createConnection(db, { useNewUrlParser: true });
 
